@@ -9,6 +9,7 @@ class EmployeeEditor extends Component {
       notModified: true
     };
     this.save = this.save.bind(this);
+    this.cancel = this.cancel.bind(this);
   }
 
   // componentWillReceiveProps
@@ -17,14 +18,14 @@ class EmployeeEditor extends Component {
       employee: Object.assign({}, prop.selected),
       originalEmployee: prop.selected,
       notModified: true
-    })
+    });
   }
   // handleChange
   handleChange(prop, val){
     if(this.state.notModified === true){
-      this.setState({ notModified: false })
+      this.setState({ notModified: false})
     }
-    var employeeCopy = Object.assign(this.state.employee);
+    var employeeCopy = Object.assign({}, this.state.employee);
     employeeCopy[prop] = val;
     this.setState({ employee: employeeCopy });
   }
