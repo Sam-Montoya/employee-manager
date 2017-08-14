@@ -15,6 +15,7 @@ class App extends Component {
     };
 
     this.selectEmployee = this.selectEmployee.bind(this);
+    this.refresh = this.refresh.bind(this);
   }
 
   selectEmployee(employee) {
