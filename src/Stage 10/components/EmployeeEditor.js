@@ -8,7 +8,7 @@ class EmployeeEditor extends Component {
       employee: null,
       originalEmployee: null,
       notModified: null
-    };
+    }; 
     this.save = this.save.bind(this);
     this.cancel = this.cancel.bind(this);
   }
