@@ -26,6 +26,9 @@ class EmployeeEditor extends Component {
         notModified: false
       });
     }
+    var employeeCopy = Object.assign({}, this.state.employee);
+    employeeCopy[prop] = val;
+    this.setState({employee: employeeCopy});
   }
 
   save() {

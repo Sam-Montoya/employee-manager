@@ -17,10 +17,6 @@ class EmployeeEditor extends Component {
       originalEmployee: props.selected,
       notModified: true
     });
-
-    var employeeCopy = Object.assign({}, this.state.employee);
-    employeeCopy[props] = val;
-    this.setState({employee: employeeCopy});
   }
 
   handleChange(prop, val) {
